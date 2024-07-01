@@ -13,10 +13,9 @@ todos = [
     }
 ]
 
-
 @app.route('/todos', methods=['GET'])
 def hello_world():
-    json_text = jsonify(todos) 
+    json_text = jsonify(todos)
     return json_text
 
 @app.route('/todos', methods=['POST'])
@@ -30,13 +29,8 @@ def add_new_todo():
 def delete_todo(position):
     selected_item = todos.pop(position)
     print("This is the position to delete:", position)
-    print(f'Todo {selected_item} deleted from the list.')
+    print (f'Todo {selected_item} deleted from the list')
     return jsonify(todos)
-    
-
-
-
-
 
 
 
